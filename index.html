@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d26">
+<title>핀볼 머지</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="money-box">
+      <div class="money-line"><span class="coin"></span><b id="money">0</b></div>
+      <div class="sub"><span id="rate">+0/s</span></div>
+    </div>
+    <div class="hud-stats">
+      <div id="ballsInfo">구슬 0</div>
+      <div id="nInfo">환산 0 · 최고 T1</div>
+    </div>
+    <button id="btnSettings" class="icon-btn" aria-label="설정">⚙</button>
+  </header>
+  <div id="stage">
+    <canvas id="cv"></canvas>
+    <div id="toast"></div>
+  </div>
+  <footer id="panel">
+    <div class="row">
+      <button class="btn buy" id="buy1"><span class="t">구슬 구매 ×1</span><span class="p" id="p1">-</span></button>
+      <button class="btn buy" id="buy10"><span class="t">×10</span><span class="p" id="p10">-</span></button>
+      <button class="btn buy" id="buyMax"><span class="t" id="tMax">MAX</span><span class="p" id="pMax">-</span></button>
+    </div>
+    <div class="row">
+      <button class="btn toggle" id="btnMerge"><span class="t">자동 병합</span><span class="p" id="mergeState">ON</span></button>
+      <button class="btn draw" id="btnDraw"><span class="t">카드 뽑기 <i class="badge" id="drawBadge">0</i></span><span class="gauge"><i id="gaugeFill"></i></span><span class="p small" id="gaugeTxt">0/6</span></button>
+      <button class="btn" id="btnUpg"><span class="t">강화</span><span class="p small" id="upgHint">장치/발사기</span></button>
+      <button class="btn" id="btnCards"><span class="t">도감</span><span class="p small" id="cardHint">0/12</span></button>
+    </div>
+  </footer>
+  <div id="modal" class="hidden" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <div class="sheet-head"><h2 id="mTitle"></h2><button class="icon-btn" id="mClose" aria-label="닫기">✕</button></div>
+      <div id="mBody"></div>
+    </div>
+  </div>
+</div>
+<script src="js/bignum.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/physics.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tests.js"></script>
+<script src="js/render.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
